@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Milena Krawetz | Portfolio{% endblock %}
+{% block content %}
+    {% for art in object_list %}
+        <p>{{ art.title }}</p>
+        <h2><a href="{{ art.get_absolute_url }}">{{ art.image }}</a></h2>
+    {% empty %}
+    <p>Нет картин</p>
+    {% endfor %}
+{% endblock %}
