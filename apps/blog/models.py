@@ -3,7 +3,7 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField(max_length = 500)
     author = models.CharField(max_length = 30)
-    datetime = models.DateTimeField('Date of publication')
+    date = models.DateField('Date of publication')
     published = models.CharField(max_length = 5)
     content = models.TextField(max_length = 100000)
 
@@ -12,3 +12,8 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return "/blog/%i/" % self.id
+
+
+class Post_image (models.Model):
+    post = models.ForeignKey('Post')
+    image = models.ImageField(upload_to = 'blog/', height_field = None, width_field = None)

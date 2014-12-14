@@ -10,6 +10,5 @@ def home(request):
         return render(request, "home/home.html")
 
 def about(request):
-    print "dx"
     return render(request, "home/about.html")
 

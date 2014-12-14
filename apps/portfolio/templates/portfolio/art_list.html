@@ -3,7 +3,7 @@
 {% block content %}
     {% for art in object_list %}
         <p>{{ art.title }}</p>
-        <h2><a href="{{ art.get_absolute_url }}">{{ art.image }}</a></h2>
+        <p><a href="{{ art.get_absolute_url }}"><img src="/media/{{ art.image }}"></a></p>
     {% empty %}
     <p>Нет картин</p>
     {% endfor %}

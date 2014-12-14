@@ -6,8 +6,8 @@ from django.views import generic
 from models import Art
 from django.views.generic import ListView, DetailView
 
-def portfolio(request):
-		return render(request, "portfolio/portfolio.html")
+# def portfolio(request):
+# 		return render(request, "portfolio/portfolio.html")
 
 class pictures_list_view(ListView):
     model = Art

@@ -3,11 +3,15 @@
 {% block content %}
 
     <div class = "form">
-        <form name = "form" action = "../form.py" method = "POST">
+        <form action = "" method = "POST">
 
-            <input class = "input" type = "text" name = "name" placeholder = "NAME" required = "required"/>
-            <input class = "input" type = "email" name = "email" placeholder = "EMAIL" required = "required"/>
-            <input class = "input_message" type = "text" name = "message" placeholder = "MESSAGE" required = "required"/>
+            {% csrf_token %}
+
+            <input class = "input" id = "author_name"  type = "text" name = "author_name" value="" placeholder = "NAME" required = "required"/>
+
+            <input class = "input" id = "email"  type = "email" name = "email" value="" placeholder = "EMAIL" required = "required"/>
+
+            <input class = "input_message" id = "message"  type = "text" name = "message" value="" placeholder = "MESSAGE" required = "required"/>
 
             <div>
                 <button class = "send" type = "submit">SEND</button>
