@@ -6,11 +6,4 @@
     <div class = 'post_date'><p>{{ post.post.date }}</p></div>
     <div class = 'post_content'>{{ post.post.content|safe }}</div>
 
-    <div class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>
-        {% for image in post.array_img %}
-        <p><img src="/media/{{ image }}" width = '700'></p>
-        {% endfor %}
-    </div>
-
-
 {% endblock %}

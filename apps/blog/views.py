@@ -34,8 +34,7 @@ def get_post_detail(request, pk):
     for image in post_images:
         post_image = image.post
         if post == post_image:
-            img = image.image
-            array_img.append(img)
+            array_img.append(image)
     post.content = parse_content(post.content, array_img)
     full_object = {'post':post, 'array_img':array_img}
     response['post'] = full_object
@@ -49,23 +48,24 @@ def parse_content(content, array_img):
         p = "<p>"+ s + "</p>"
         content = content.replace(content[:content.find('##')+2], '')
         id = content[0:(content.find('$$'))]
-        array_images = get_images(id, array_img)
-        # group_of_images = ''
-        # for image_of_group in get_images
-        #
-        #     images = "<img src="/media/"+ group_of_images +">"
-
-        # div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+group_of_images+"</div>"
-        div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'></div>"
-    content = content.replace(content[:content.find('$$')+2], '')
-    result += p + div
+        array_group_of_images = get_group_of_images(id, array_img)
+        div = get_div(id, array_group_of_images)
+        content = content.replace(content[:content.find('$$')+2], '')
+        result += p + div
     p = "<p>"+ content + "</p>"
     return result+p
 
-def get_images(id, array_img):
+def get_group_of_images(id, array_img):
     array_group_images = []
     for image in array_img:
-        print image
+         if id == image.image_group:
+             array_group_images.append(image.image)
+    return array_group_images
 
-
+def get_div (id, array_group_of_images):
+    images = ''
+    for image in array_group_of_images:
+        images += "<img src='/media/"+ image.name + "'>"
+        div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+ images+"</div>"
+    return div
 
