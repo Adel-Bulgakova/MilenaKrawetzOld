@@ -4,34 +4,68 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views import generic
 from models import Post, Post_image
-# from django.views.generic import ListView, DetailView
 from django import template
 
 
 def get_posts_list(request):
 	response = {}
-	response['posts'] = Post.objects.all()
-	return render_to_response('portfolio/post_list.html', response, template.RequestContext(request))
+	posts = Post.objects.all()
+	full_objects = []
+	for post in posts:
+		post_images = Post_image.objects.all()
+		array_img = []
+		for image in post_images:
+			post_image = image.post
+			if post == post_image:
+				img = image.image
+				array_img.append(img)
+		full_object = {'post':post, 'array_img':array_img}
+		full_objects.append(full_object)
+
+	response['posts'] = full_objects
+	return render_to_response('blog/post_list.html', response, template.RequestContext(request))
 
 
-def get_post_detail(request):
-	response = {}
-	response['post'] = None
-	response['posts'] = Post.objects.filter(products__isnull=False).distinct()
-	return render_to_response('portfolio/post_detail.html', response, template.RequestContext(request))
+def get_post_detail(request, pk):
+    response = {}
+    post = get_object_or_404(Post, pk=pk)
+    post_images = Post_image.objects.all()
+    array_img = []
+    for image in post_images:
+        post_image = image.post
+        if post == post_image:
+            img = image.image
+            array_img.append(img)
+    post.content = parse_content(post.content, array_img)
+    full_object = {'post':post, 'array_img':array_img}
+    response['post'] = full_object
+    return render_to_response('blog/post_detail.html', response, template.RequestContext(request))
 
 
-def get_images(request):
+def parse_content(content, array_img):
+    result = ''
+    while content.find('##')>0:
+        s = content[0:content.find('##')]
+        p = "<p>"+ s + "</p>"
+        content = content.replace(content[:content.find('##')+2], '')
+        id = content[0:(content.find('$$'))]
+        array_images = get_images(id, array_img)
+        # group_of_images = ''
+        # for image_of_group in get_images
+        #
+        #     images = "<img src="/media/"+ group_of_images +">"
 
-    # image = Post_image.objects.filter(post_image_id=id).order_by('-id')
-    image = Post_image.objects.select_related('image')
-    return render_to_response('portfolio/post_list.html', {"image": image}, template.RequestContext(request))
+        # div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+group_of_images+"</div>"
+        div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'></div>"
+    content = content.replace(content[:content.find('$$')+2], '')
+    result += p + div
+    p = "<p>"+ content + "</p>"
+    return result+p
+
+def get_images(id, array_img):
+    array_group_images = []
+    for image in array_img:
+        print image
 
 
-
-# class posts_list_view(ListView):
-#     model = Post
-#
-# class post_detail_view(DetailView):
-#     model = Post
 

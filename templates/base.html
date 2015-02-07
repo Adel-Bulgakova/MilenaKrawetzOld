@@ -1,9 +1,19 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+
 		<title>{% block title %}{% endblock %}</title>
-		<link rel = 'stylesheet' type = 'text/css' href = '/static/css/style.css'>
+        <meta name="description" content="Milena Krawetz Official" />
+        <meta name="keywords" content="Milena Krawetz, art, travel" />
+
+        <!--<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+        <script src = "/static/libs/jquery-1.10.2.min.js"></script>
+        <script src = "/static/libs/fotorama-4.6.3/fotorama.js"></script>
+
+		<link rel = "stylesheet" type = "text/css" href = "/static/css/style.css">
+        <link rel = "stylesheet" type = "text/css" href = "/static/libs/fotorama-4.6.3/fotorama.css">
 		{% block scripts %}{% endblock %}
+
 	</head>
 	<body>
         <div class = "layout">
@@ -18,7 +28,7 @@
                     <div class = "li"><a href = "/about/">ABOUT</a></div>
 		            <div class = "li"><a href = "/portfolio/">PORTFOLIO</a></div>
 			        <div class = "li"><a href = "/blog/">BLOG</a></div>
-		            <!--<div><a href = "shop.html">Shop</a></div>-->
+		            <!--<div><a href = "/shop.html">Shop</a></div>-->
 			        <div class = "li"><a href = "/contact/">CONTACT</a></div>
                 </div>
 		    </div>
@@ -27,7 +37,7 @@
             {% block content %}{% endblock %}
             </div>
 
-            <div class = "footer">Created by Adel Davletshina</div>
+            <footer class = "footer">Created by Adel Davletshina</footer>
 
         </div>
     </body>

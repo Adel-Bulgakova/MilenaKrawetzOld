@@ -6,6 +6,7 @@ class Post(models.Model):
     date = models.DateField('Date of publication')
     published = models.CharField(max_length = 5)
     content = models.TextField(max_length = 100000)
+    preview = models.TextField(max_length = 100000)
 
     def __unicode__(self):
         return self.title
@@ -16,4 +17,5 @@ class Post(models.Model):
 
 class Post_image (models.Model):
     post = models.ForeignKey('Post')
+    image_group = models.CharField(max_length = 5)
     image = models.ImageField(upload_to = 'blog/', height_field = None, width_field = None)

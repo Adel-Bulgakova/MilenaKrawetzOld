@@ -2,17 +2,17 @@
 {% block title %}Milena Krawetz | Blog{% endblock %}
 {% block content %}
 
-    {% for post in object_list %}
-        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+    {% for full_object in posts %}
+        <h2><a href="{{ full_object.post.get_absolute_url }}">{{ full_object.post.title }}</a></h2>
 
 
-            {% for post in image %}
-                <p>ss<img src="/media/blog/{{ post_image.image }}"></p>
+            {% for image in full_object.array_img %}
+                <p><img src="/media/{{ image }}" height="120"></p>
             {% endfor %}
 
 
-        <p>{{ post.date }}</p>
-        <p>{{ post.content }}</p>
+        <p>{{ full_object.post.date }}</p>
+        <p>{{ full_object.post.preview }}</p>
     {% empty %}
         <p>Нет постов</p>
     {% endfor %}
