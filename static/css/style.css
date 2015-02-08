@@ -8,7 +8,7 @@
 .layout {
     width: 1200px;
     margin: auto;
-    background: grey;
+    /*background: grey;*/
 }
 
 .head {
@@ -37,6 +37,10 @@
     height: 610px;
 }
 
+.blog_content {
+    margin: 0 250px;
+}
+
 .table_row {
     display: table-row;
 }
@@ -60,7 +64,7 @@
 }
 
 .footer {
-    background: red;
+/*    background: red;*/
     height: 25px;
     text-align: center;
 }

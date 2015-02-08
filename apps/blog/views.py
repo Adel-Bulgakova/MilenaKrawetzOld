@@ -19,7 +19,7 @@ def get_posts_list(request):
 			if post == post_image:
 				img = image.image
 				array_img.append(img)
-		full_object = {'post':post, 'array_img':array_img}
+		full_object = {'post':post, 'array_img':array_img[0]}
 		full_objects.append(full_object)
 
 	response['posts'] = full_objects
@@ -66,6 +66,6 @@ def get_div (id, array_group_of_images):
     images = ''
     for image in array_group_of_images:
         images += "<img src='/media/"+ image.name + "'>"
-        div = "<div id = '"+ id + "' class = 'fotorama' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+ images+"</div>"
+        div = "<div id = '"+ id + "' class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+ images+"</div>"
     return div
 
