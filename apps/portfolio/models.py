@@ -1,8 +1,7 @@
 from django.db import models
 
-class Art(models.Model):
+class Portfolio(models.Model):
     title = models.CharField(max_length = 500)
-    image = models.ImageField(upload_to = 'images/', height_field = None, width_field = None)
     price = models.FloatField(default = 0)
     about = models.CharField(max_length = 2000)
 
@@ -15,5 +14,11 @@ class Art(models.Model):
     class meta:
         verbose_name_plural = "Portfolio"
 
+class Portfolio_image (models.Model):
+    portfolio = models.ForeignKey('Portfolio')
+    image = models.ImageField(upload_to = 'portfolio/', height_field = None, width_field = None)
+
+    def __unicode__(self):
+        return self.image.name
 
 

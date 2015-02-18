@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Milena Krawetz | Portfolio{% endblock %}
+{% block content %}
+
+<div class = 'portfolio_content'>
+
+    {% for full_object in portfolio %}
+        <p>{{ full_object.portfolio.title }}</p>
+        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>
+
+          {% for image in full_object.array_img %}
+                <img src="/media/{{ image }}" height= "467">
+            {% endfor %}
+
+        </div>
+
+        <p>{{ full_object.portfolio.about }}</p>
+
+    {% empty %}
+    <p>Нет картин</p>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
+

@@ -25,7 +25,7 @@
     display: table;
 }
 
-.li {
+.menu_item {
     display: table-cell;
     width: 400px;
     text-align: center;
@@ -38,6 +38,10 @@
 }
 
 .blog_content {
+    margin: 0 250px;
+}
+
+.portfolio_content {
     margin: 0 250px;
 }
 
@@ -64,9 +68,9 @@
 }
 
 .footer {
-/*    background: red;*/
     height: 25px;
     text-align: center;
+    font: 10px 'ProximaNovaRegular', Arial, sans-serif;
 }
 
 .form {
