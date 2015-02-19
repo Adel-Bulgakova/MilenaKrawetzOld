@@ -1,13 +1,19 @@
 from django.contrib import admin
 from models import Post, Post_image
 
-# class ImagesInline(admin.TabularInline):
-#     model = Post_images
-#
-# class PostAdmin(admin.ModelAdmin):
-#     inlines = [
-#         ImagesInline,
-#     ]
+class PostImagesInline(admin.TabularInline):
+	model = Post_image
+	extra = 0
 
-admin.site.register(Post)
-admin.site.register(Post_image)
+
+class PostAdmin(admin.ModelAdmin):
+    fieldsets =  (None,
+        {'fields': ('title', 'date', 'published', 'preview', 'content',)}
+    ),
+    inlines = [PostImagesInline]
+    list_display = ('title', 'date', 'published',)
+
+
+admin.site.register(Post, PostAdmin)
+# admin.site.register(Post)
+# admin.site.register(Post_image)
