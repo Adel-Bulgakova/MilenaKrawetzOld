@@ -13,8 +13,8 @@ class Portfolio(models.Model):
         return "/portfolio/%i/" % self.id
 
     class Meta:
-        verbose_name = u'Описание портфолио'
-        verbose_name_plural = u'Описания портфолио'
+        verbose_name = u'Портфолио'
+        verbose_name_plural = u'Портфолио'
 
 
 class Portfolio_image (models.Model):

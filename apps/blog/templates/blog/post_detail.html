@@ -2,8 +2,11 @@
 {% block title %}Milena Krawetz | Blog{% endblock %}
 {% block content %}
  <div class = 'blog_content'>
+
     <div class = 'post_title'><h2>{{ post.post.title }}</h2></div>
     <div class = 'post_date'><p>{{ post.post.date }}</p></div>
     <div class = 'post_content'>{{ post.post.content|safe }}</div>
+     <div id = 'disqus_thread'></div>
+
  </div>
 {% endblock %}

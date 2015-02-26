@@ -6,9 +6,18 @@
         <meta name="description" content="Milena Krawetz Official" />
         <meta name="keywords" content="Milena Krawetz, art, travel" />
 
-        <!--<script src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
         <script src = "/static/libs/jquery-1.10.2.min.js"></script>
         <script src = "/static/libs/fotorama-4.6.3/fotorama.js"></script>
+
+        <script type="text/javascript">
+            var disqus_shortname = 'milenakrawetz';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
 
 		<link rel = "stylesheet" type = "text/css" href = "/static/css/style.css">
         <link rel = "stylesheet" type = "text/css" href = "/static/libs/fotorama-4.6.3/fotorama.css">
@@ -19,19 +28,22 @@
         <div class = "layout">
 
             <div class = "head">
-                <div class = "name">MILENA KRAWETZ</div>
-            </div>
 
-		    <div class = "menu">
-                <div class = "table_row">
+                <a href = "/home/"><div class = "logo"></div></a>
+
+		        <div class = "menu">
                     <div class = "menu_item"><a href = "/home/">HOME</a></div>
+                    <div class = "separator">/</div>
                     <div class = "menu_item"><a href = "/about/">ABOUT</a></div>
-		            <div class = "menu_item"><a href = "/portfolio/">PORTFOLIO</a></div>
-			        <div class = "menu_item"><a href = "/blog/">BLOG</a></div>
-		            <!--<div class = "menu_item"><a href = "/shop.html">Shop</a></div>-->
-			        <div class = "menu_item"><a href = "/contact/">CONTACT</a></div>
-                </div>
-		    </div>
+                    <div class = "separator">/</div>
+                    <div class = "menu_item"><a href = "/portfolio/">PORTFOLIO</a></div>
+                    <div class = "separator">/</div>
+                    <div class = "menu_item"><a href = "/blog/">BLOG</a></div>
+                    <div class = "separator">/</div>
+                    <div class = "menu_item"><a href = "/contact/">CONTACT</a></div>
+		        </div>
+
+            </div>
 
             <div class = "content">
             {% block content %}{% endblock %}

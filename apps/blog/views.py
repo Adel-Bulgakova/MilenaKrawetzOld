@@ -1,8 +1,6 @@
 # encoding: utf-8
-from django.http import HttpResponseRedirect
+
 from django.shortcuts import render_to_response, get_object_or_404
-from django.core.urlresolvers import reverse
-from django.views import generic
 from models import Post, Post_image
 from django import template
 
@@ -19,6 +17,7 @@ def get_posts_list(request):
 			if post == post_image:
 				img = image.image
 				array_img.append(img)
+
 		full_object = {'post':post, 'array_img':array_img[0]}
 		full_objects.append(full_object)
 

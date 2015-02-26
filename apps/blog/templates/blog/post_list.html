@@ -7,11 +7,9 @@
 
         <h2><a href="{{ full_object.post.get_absolute_url }}">{{ full_object.post.title }}</a></h2>
 
-
-            <!--{% for image in full_object.array_img %}-->
-                <!--<p><img src="/media/{{ image }}" height="120"></p>-->
-            <!--{% endfor %}-->
+            {% if full_object.array_img %}
                 <p><img src="/media/{{ full_object.array_img }}" height="120"></p>
+            {% endif %}
 
         <p>{{ full_object.post.date }}</p>
         <p>{{ full_object.post.preview }}</p>
