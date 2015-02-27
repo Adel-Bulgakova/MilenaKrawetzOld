@@ -1,12 +1,34 @@
 {% extends "base.html" %}
+
 {% block title %}Milena Krawetz | Blog{% endblock %}
+
+{% block css %}
+    <link rel = 'stylesheet' type = 'text/css' href = "/static/libs/fotorama-4.6.3/fotorama.css">
+{% endblock %}
+
+{% block scripts %}
+
+    <script src = "/static/libs/jquery-2.1.3.min.js"></script>
+    <script src = "/static/libs/fotorama-4.6.3/fotorama.js"></script>
+
+    <script type="text/javascript">
+        var disqus_shortname = 'milenakrawetz';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+{% endblock %}
+
 {% block content %}
- <div class = 'blog_content'>
+    <div class = 'blog_content'>
 
-    <div class = 'post_title'><h2>{{ post.post.title }}</h2></div>
-    <div class = 'post_date'><p>{{ post.post.date }}</p></div>
-    <div class = 'post_content'>{{ post.post.content|safe }}</div>
-     <div id = 'disqus_thread'></div>
+        <div class = 'post_title'><h2>{{ post.post.title }}</h2></div>
+        <div class = 'post_date'><p>{{ post.post.date }}</p></div>
+        <div class = 'post_content'>{{ post.post.content|safe }}</div>
+        <div id = 'disqus_thread'></div>
 
- </div>
+</div>
 {% endblock %}

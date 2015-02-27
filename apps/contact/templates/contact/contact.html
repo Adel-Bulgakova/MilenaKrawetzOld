@@ -2,20 +2,21 @@
 {% block title %}Milena Krawetz | Contact{% endblock %}
 {% block content %}
 
-    <div class = "form">
-        <form action = "" method = "POST">
+    <div class = 'form'>
+        <form action = "" method = 'POST'>
 
             {% csrf_token %}
 
-            <input class = "input" id = "author_name"  type = "text" name = "author_name" value="" placeholder = "NAME" required = "required"/>
+            <input class = 'input' id = 'author_name'  type = 'text' name = 'author_name' value ='' placeholder = 'NAME' required = 'required'/>
 
-            <input class = "input" id = "email"  type = "email" name = "email" value="" placeholder = "EMAIL" required = "required"/>
+            <input class = 'input' id = 'email'  type = 'email' name = 'email' value ='' placeholder = 'EMAIL' required = "required"/>
 
-            <input class = "input_message" id = "message"  type = "text" name = "message" value="" placeholder = "MESSAGE" required = "required"/>
+            <input class = 'input_message' id = 'message'  type = 'text' name = 'message' value ='' placeholder = 'MESSAGE' required = 'required'/>
 
             <div>
-                <button class = "send" type = "submit">SEND</button>
+                <button class = 'send' type = 'submit'>SEND</button>
             </div>
+
         </form>
 
     </div>

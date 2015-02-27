@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    font: 14px 'ProximaNovaRegular', Arial, sans-serif;
+    font: 14px "proxima-nova-1","proxima-nova-2","Helvetica Neue",Helvetica, Arial, sans-serif;
 }
 
 .layout {
@@ -14,7 +14,7 @@
 
 .head {
     width: 900px;
-    height:100px;
+    height:130px;
 /*    float:left;*/
 }
 
@@ -23,9 +23,31 @@
     float: left;
     width: 160px;
     height: 100px;
+    margin: 15px 0;
     background: url("/static/images/Milena_Krawetz.png");
     background-repeat:no-repeat;
 }
+
+    .logo:hover {
+       /* display: inline-block;
+        float: left;
+        width: 160px;
+        height: 100px;
+        margin: 15px 0;*/
+        background: url("/static/images/Milena_Krawetz_pink.png");
+        background-repeat:no-repeat;
+    }
+
+    .logo:visited {
+        display: inline-block;
+        float: left;
+        width: 160px;
+        height: 100px;
+        margin: 15px 0;
+        background: url("/static/images/Milena_Krawetz.png");
+        background-repeat:no-repeat;
+    }
+
 
 .menu {
     display: inline-block;
@@ -33,7 +55,7 @@
 }
 
 .menu_item {
-    height: 100px;
+    height: 130px;
     display: table-cell;
     vertical-align: middle;
 }
@@ -58,46 +80,40 @@ a {
     }
 
 .content {
+     height: 100%;
 }
 
+.footer {
+    height: 25px;
+    display: table-cell;
+    width: inherit;
+    text-align: center;
+    vertical-align: middle;
+    font: 10px 'ProximaNovaRegular', Arial, sans-serif;
+}
 
  /*---blog---*/
 
 .blog_content {
-    margin: 0 100px;
+    /*margin: 0 100px;*/
 }
 
  /*---portfolio---*/
 
 .portfolio_content {
-    margin: 0 100px;
+    /*margin: 0 100px;*/
 }
 
 /*---about---*/
 
-.right {
-    display: table-cell;
-    width: 450px;
-    align: right;
-    vertical-align: middle;
-}
-
-.left {
-    display: table-cell;
-    width: 450px;
-    align: center;
-}
-
-.footer {
-    height: 25px;
-    text-align: center;
-    font: 10px 'ProximaNovaRegular', Arial, sans-serif;
+.info {
+    height: 560px;
 }
 
 /*---contact---*/
 
 .form {
-    margin: 200px 250px 10px 250px;
+    margin: 190px 250px 20px 250px;
 }
 
 .input {
@@ -136,10 +152,11 @@ a {
 
 /*---home---*/
 
+/*
 .home_content {
-    /*margin: 0px;*/
-
+    height: 100%;
 }
+*/
 
 .box {
 	background-color: fff;
@@ -160,7 +177,7 @@ a {
 			/*width: 100px;*/
 	}
 
-		 .box1 {
+		 #box1 {
 			width: 585px;
 			height: 350px;
 			background: url("/static/images/etud.jpg");
@@ -174,7 +191,7 @@ a {
 		float: left;
 			/*width: 100px;*/
 	}
-        .box2 {
+        #box2 {
 			width: 305px;
 			height: 170px;
 			background: url("/static/images/anahata.jpg");
@@ -184,7 +201,7 @@ a {
 			margin: 0 0 10px 5px;
 		}
 
-        .box3 {
+        #box3 {
 			width: 305px;
 			height: 170px;
 			background: url("/static/images/etud.jpg");
@@ -199,7 +216,7 @@ a {
 	/*float: left;*/
 	/*width: 200px;*/
 }
-	.box4 {
+	#box4 {
 	    float: left;
 		width: 445px;
 		height: 200px;
@@ -210,7 +227,7 @@ a {
 		margin: 5px 5px 0 0;
 	}
 
-	.box5 {
+	#box5 {
 	    float: left;
 		width: 445px;
 		height: 200px;
@@ -221,3 +238,11 @@ a {
 		margin: 5px 0 0 5px;
 	}
 
+.slide {
+    display: none;
+    width: inherit;
+	height: 30px;
+	background-color: white;
+	vertical-align: bottom;
+	/*border-top: 1px solid #ff0dd1;*/
+}

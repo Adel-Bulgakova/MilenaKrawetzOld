@@ -3,7 +3,8 @@
 {% block content %}
 
 <div class = 'blog_content'>
-        {% for full_object in posts %}
+
+    {% for full_object in posts %}
 
         <h2><a href="{{ full_object.post.get_absolute_url }}">{{ full_object.post.title }}</a></h2>
 
