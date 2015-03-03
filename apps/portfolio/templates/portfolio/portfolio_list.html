@@ -17,16 +17,20 @@
 <div class = 'portfolio_content'>
 
     {% for full_object in portfolio %}
-        <p>{{ full_object.portfolio.title }}</p>
-        <p>{{ full_object.portfolio.about }}</p>
 
-        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>
+    <div class = 'portfolio'>
+        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '300' data-ratio = '300/200' data-max-width = '100%'>
 
-          {% for image in full_object.array_img %}
+            {% for image in full_object.array_img %}
                 <img src="/media/{{ image }}" height= "467">
             {% endfor %}
 
         </div>
+
+    <div class = 'portfolio_description'>
+        <p>{{ full_object.portfolio.title }}</p>
+        <p>{{ full_object.portfolio.about }}</p>
+    </div>
 
     {% empty %}
     <p>Нет картин</p>

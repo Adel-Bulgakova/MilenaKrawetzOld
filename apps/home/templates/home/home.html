@@ -9,13 +9,14 @@
         $(".parent")
 
         .mouseenter(function(){
-        $(this).find("div").slideDown();
+        $(this).find("div.slide").slideDown();
         })
 
         .mouseleave(function(){
-        $(this).find("div").slideUp()
+        $(this).find("div.slide").slideUp()
         });
-};
+
+        };
     </script>
 
 {% endblock %}
@@ -27,16 +28,23 @@
 
 			<div class = 'box_top_left'>
 				<div class = 'parent' id = 'box1'>
-                    <div class = 'slide'>Моя первая картина вот эта</div>
+                    <div class = 'slide'>
+                        <div class = 'name'>Моя первая картина вот эта</div>
+                    </div>
+
                 </div>
             </div>
 
 			<div class = 'box_top_right'>
 				<div class = 'parent' id = 'box2'>
-                    <div class = 'slide'>ddd</div>
+                    <div class = 'slide'>
+                        <div class = 'name'>Моя первая картина вот эта</div>
+                    </div>
                 </div>
                 <div class = 'parent' id = 'box3'>
-                    <div class = 'slide'>dd</div>
+                    <div class = 'slide'>
+                        <div class = 'name'>Моя первая картина вот эта</div>
+                    </div>
                 </div>
 			</div>
 
@@ -44,10 +52,14 @@
 
         <div class = 'box_bottom'>
 			<div class = 'parent' id = 'box4'>
-                <div class = 'slide'></div>
+                <div class = 'slide'>
+                    <div class = 'name'>Моя первая картина вот эта</div>
+                </div>
             </div>
 			<div class = 'parent' id = 'box5'>
-                <div class = 'slide'></div>
+                <div class = 'slide'>
+                    <div class = 'name'>Моя первая картина вот эта</div>
+                </div>
             </div>
 		</div>
 

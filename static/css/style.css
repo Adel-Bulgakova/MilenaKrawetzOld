@@ -104,6 +104,18 @@ a {
     /*margin: 0 100px;*/
 }
 
+.portfolio{
+    display: inline-block;
+    float: left;
+    /*margin: 0 100px;*/
+}
+.portfolio_description {
+    display: inline-block;
+    float: left;
+    /*margin: 0 100px;*/
+}
+
+
 /*---about---*/
 
 .info {
@@ -160,7 +172,6 @@ a {
 
 .box {
 	background-color: fff;
-	/*height: 550px;*/
 	margin: auto;
 	background-size: cover;
 	background-position: 50% 50%;
@@ -169,8 +180,6 @@ a {
 }
 
 .box_top{
-	/*float: left;*/
-	/*width: 450px;*/
 }
 	.box_top_left {
 		float: left;
@@ -189,7 +198,6 @@ a {
 
     .box_top_right {
 		float: left;
-			/*width: 100px;*/
 	}
         #box2 {
 			width: 305px;
@@ -213,8 +221,7 @@ a {
 
 
 .box_bottom {
-	/*float: left;*/
-	/*width: 200px;*/
+
 }
 	#box4 {
 	    float: left;
@@ -238,11 +245,16 @@ a {
 		margin: 5px 0 0 5px;
 	}
 
+
 .slide {
     display: none;
-    width: inherit;
 	height: 30px;
 	background-color: white;
+}
+
+.name {
+    height: 30px;
+    width: inherit;
+    display: table-cell;
 	vertical-align: bottom;
-	/*border-top: 1px solid #ff0dd1;*/
 }
