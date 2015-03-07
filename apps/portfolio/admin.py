@@ -7,7 +7,7 @@ class PortfolioImagesInline(admin.TabularInline):
 
 class PortfolioAdmin(admin.ModelAdmin):
     fieldsets =  (None,
-        {'fields': ('title', 'about',)}
+        {'fields': ('title', 'description',)}
     ),
     inlines = [PortfolioImagesInline]
     list_display = ('title',)

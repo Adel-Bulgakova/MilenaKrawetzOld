@@ -3,7 +3,7 @@
 {% block title %}Milena Krawetz | Blog{% endblock %}
 
 {% block css %}
-    <link rel = 'stylesheet' type = 'text/css' href = "/static/libs/fotorama-4.6.3/fotorama.css">
+    <link rel = 'stylesheet' href = "/static/libs/fotorama-4.6.3/fotorama.css">
 {% endblock %}
 
 {% block scripts %}
@@ -27,7 +27,7 @@
 
         <div class = 'post_title'><h2>{{ post.post.title }}</h2></div>
         <div class = 'post_date'><p>{{ post.post.date }}</p></div>
-        <div class = 'post_content'>{{ post.post.content|safe }}</div>
+        <article class = 'post_content'>{{ post.post.content|safe }}</article>
         <div id = 'disqus_thread'></div>
 
 </div>

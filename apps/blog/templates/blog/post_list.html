@@ -1,23 +1,26 @@
 {% extends "base.html" %}
 {% block title %}Milena Krawetz | Blog{% endblock %}
-{% block content %}
 
+{% block content %}
 <div class = 'blog_content'>
 
     {% for full_object in posts %}
 
-        <h2><a href="{{ full_object.post.get_absolute_url }}">{{ full_object.post.title }}</a></h2>
-
-            {% if full_object.array_img %}
-                <p><img src="/media/{{ full_object.array_img }}" height="120"></p>
-            {% endif %}
+        <h2><a href='{{ full_object.post.get_absolute_url }}'>{{ full_object.post.title }}</a></h2>
 
         <p>{{ full_object.post.date }}</p>
+
+            {% if full_object.img %}
+                <div class = 'news_image' style='background:url(/media/{{ full_object.img }}); background-size: cover;	background-position: 50% 50%;	background-repeat: no-repeat;'></div>
+            {% endif %}
+
         <p>{{ full_object.post.preview }}</p>
-    {% empty %}
-        <p>Нет постов</p>
+
+        <a href='{{ full_object.post.get_absolute_url }}'>Read more</a>
+
+        {% empty %}
+            <p>Нет постов</p>
     {% endfor %}
 
-    <!--{% block navigation %} << Назад   Вперед >>{% endblock %}-->
 </div>
-    {% endblock %}
+{% endblock %}

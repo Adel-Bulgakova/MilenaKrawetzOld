@@ -18,7 +18,7 @@ def get_posts_list(request):
 				img = image.image
 				array_img.append(img)
 
-		full_object = {'post':post, 'array_img':array_img[0]}
+		full_object = {'post':post, 'img':array_img[0]}
 		full_objects.append(full_object)
 
 	response['posts'] = full_objects

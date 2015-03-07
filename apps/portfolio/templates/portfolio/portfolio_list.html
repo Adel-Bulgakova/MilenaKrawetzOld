@@ -2,7 +2,7 @@
 {% block title %}Milena Krawetz | Portfolio{% endblock %}
 
 {% block css %}
-    <link rel = 'stylesheet' type = 'text/css' href = "/static/libs/fotorama-4.6.3/fotorama.css">
+    <link rel = 'stylesheet' href = "/static/libs/fotorama-4.6.3/fotorama.css">
 {% endblock %}
 
 {% block scripts %}
@@ -12,31 +12,31 @@
 
 {% endblock %}
 
-{% block content %}
+    {% block content %}
 
-<div class = 'portfolio_content'>
+<!--<div class = 'portfolio_content'>-->
 
     {% for full_object in portfolio %}
 
-    <div class = 'portfolio'>
-        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '300' data-ratio = '300/200' data-max-width = '100%'>
+    <div class = 'portfolio' id = '{{ full_object.portfolio.pk }}'>
+        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/400' data-max-width = '100%'>
 
             {% for image in full_object.array_img %}
-                <img src="/media/{{ image }}" height= "467">
+                <img src="/media/{{ image }}" >
             {% endfor %}
 
         </div>
+    </div>
 
     <div class = 'portfolio_description'>
         <p>{{ full_object.portfolio.title }}</p>
-        <p>{{ full_object.portfolio.about }}</p>
+        <p>{{ full_object.portfolio.description }}</p>
     </div>
 
     {% empty %}
     <p>Нет картин</p>
     {% endfor %}
 
-</div>
 
-{% endblock %}
-
+<!--</div>-->
+    {% endblock %}

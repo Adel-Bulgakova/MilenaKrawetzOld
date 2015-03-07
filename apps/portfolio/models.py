@@ -4,7 +4,7 @@ from django.db import models
 
 class Portfolio(models.Model):
     title = models.CharField(u'Заголовок', max_length = 500)
-    about = models.CharField(u'Описание', max_length = 2000)
+    description = models.CharField(u'Описание', max_length = 2000)
 
     def __unicode__(self):
         return self.title
@@ -15,7 +15,6 @@ class Portfolio(models.Model):
     class Meta:
         verbose_name = u'Портфолио'
         verbose_name_plural = u'Портфолио'
-
 
 class Portfolio_image (models.Model):
     portfolio = models.ForeignKey('Portfolio')

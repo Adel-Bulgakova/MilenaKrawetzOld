@@ -6,20 +6,20 @@
         <meta name="description" content = 'Milena Krawetz Official' />
         <meta name="keywords" content = 'Milena Krawetz, art, travel' />
 
-      	<link rel = 'stylesheet' type = 'text/css' href = "/static/css/style.css">
+      	<link rel = 'stylesheet' href = "/static/css/style.css">
         {% block css %}{% endblock %}
 
         {% block scripts %}{% endblock %}
 
 	</head>
 	<body>
-        <div class = 'layout'>
+        <div id = 'wrapper'>
 
-            <div class = 'head'>
+            <div class = 'header'>
 
                 <a href = "/" class = 'logo'></a>
 
-		        <div class = 'menu'>
+		        <nav class = 'menu'>
                     <div class = 'menu_item'><a href = "/home/">HOME</a></div>
                     <div class = 'separator'>/</div>
                     <div class = 'menu_item'><a href = "/about/">ABOUT</a></div>
@@ -29,7 +29,7 @@
                     <div class = 'menu_item'><a href = "/blog/">BLOG</a></div>
                     <div class = 'separator'>/</div>
                     <div class = 'menu_item'><a href = "/contact/">CONTACT</a></div>
-		        </div>
+		        </nav>
 
             </div>
 

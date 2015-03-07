@@ -4,22 +4,21 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    font: 14px "proxima-nova-1","proxima-nova-2","Helvetica Neue",Helvetica, Arial, sans-serif;
+   /* font: 14px "Helvetica Neue",Helvetica, Arial, sans-serif;*/
+    color: #666;
+    font: 14px "liberation-sans",sans-serif;
 }
 
-.layout {
+#wrapper {
     width: 900px;
     margin: auto;
 }
 
-.head {
-    width: 900px;
-    height:130px;
-/*    float:left;*/
+.header {
+    height: 130px;
 }
 
 .logo {
-    display: inline-block;
     float: left;
     width: 160px;
     height: 100px;
@@ -29,8 +28,7 @@
 }
 
     .logo:hover {
-       /* display: inline-block;
-        float: left;
+       /* float: left;
         width: 160px;
         height: 100px;
         margin: 15px 0;*/
@@ -39,18 +37,16 @@
     }
 
     .logo:visited {
-        display: inline-block;
-        float: left;
+/*        float: left;
         width: 160px;
         height: 100px;
-        margin: 15px 0;
+        margin: 15px 0;*/
         background: url("/static/images/Milena_Krawetz.png");
         background-repeat:no-repeat;
     }
 
 
 .menu {
-    display: inline-block;
     float: right;
 }
 
@@ -67,12 +63,13 @@
 }
 
 a {
-    color: #1c1c1c;
+    /*color: #1c1c1c;*/
+    color: #666;
     text-decoration: none;
 }
 
     a:visited {
-        color: #1c1c1c; /* Цвет посещенных ссылок */
+        color: #666; /* Цвет посещенных ссылок */
     }
 
     a:hover {
@@ -95,23 +92,28 @@ a {
  /*---blog---*/
 
 .blog_content {
-    /*margin: 0 100px;*/
+  /*  margin: 0 100px;*/
 }
+
+.news_image {
+    width: 300px;
+	height: 300px;
+}
+
+
 
  /*---portfolio---*/
 
 .portfolio_content {
-    /*margin: 0 100px;*/
+   /* margin: 0 100px;*/
 }
 
 .portfolio{
-    display: inline-block;
-    float: left;
+/*  float: left;*/
     /*margin: 0 100px;*/
 }
 .portfolio_description {
-    display: inline-block;
-    float: left;
+/*    float: left;*/
     /*margin: 0 100px;*/
 }
 
@@ -183,16 +185,11 @@ a {
 }
 	.box_top_left {
 		float: left;
-			/*width: 100px;*/
 	}
 
 		 #box1 {
 			width: 585px;
 			height: 350px;
-			background: url("/static/images/etud.jpg");
-			background-size: cover;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
 			margin: 0 5px 5px 0;
 		}
 
@@ -202,20 +199,12 @@ a {
         #box2 {
 			width: 305px;
 			height: 170px;
-			background: url("/static/images/anahata.jpg");
-			background-size: cover;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
 			margin: 0 0 10px 5px;
 		}
 
         #box3 {
 			width: 305px;
 			height: 170px;
-			background: url("/static/images/etud.jpg");
-			background-size: cover;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
 			margin: 5px 0 5px 5px;
 		}
 
@@ -227,10 +216,6 @@ a {
 	    float: left;
 		width: 445px;
 		height: 200px;
-		background: url("/static/images/etud.jpg");
-		background-size: cover;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
 		margin: 5px 5px 0 0;
 	}
 
@@ -238,10 +223,6 @@ a {
 	    float: left;
 		width: 445px;
 		height: 200px;
-		background: url("/static/images/rospis_sten_filosofiya.jpg");
-		background-size: cover;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
 		margin: 5px 0 0 5px;
 	}
 
