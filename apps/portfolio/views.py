@@ -26,17 +26,16 @@ def get_random_images(request):
 
 def get_portfolio_list(request):
 	response = {}
-	portfolio = Portfolio.objects.all()
+	works = Portfolio.objects.all()
 	full_objects = []
-	for portfolio in portfolio:
-		portfolio_images = Portfolio_image.objects.all()
-		array_img = []
-		for image in portfolio_images:
-			portfolio_image = image.portfolio
-			if portfolio == portfolio_image:
-				img = image.image
-				array_img.append(img)
-		full_object = {'portfolio':portfolio, 'array_img':array_img}
+	for work in works:
+		pictures = Portfolio_image.objects.all()
+		work_images = []
+		for picture in pictures:
+			if work == picture.portfolio:
+				work_image = picture.image
+				work_images.append(work_image)
+		full_object = {'portfolio':work, 'work_images':work_images}
 		full_objects.append(full_object)
 
 	response['portfolio'] = full_objects

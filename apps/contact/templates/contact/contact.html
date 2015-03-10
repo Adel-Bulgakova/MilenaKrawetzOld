@@ -1,23 +1,29 @@
 {% extends "base.html" %}
 {% block title %}Milena Krawetz | Contact{% endblock %}
-{% block content %}
-
-    <div class = 'form'>
-        <form action = "" method = 'POST'>
-
-            {% csrf_token %}
-
-            <input class = 'input' id = 'author_name'  type = 'text' name = 'author_name' value ='' placeholder = 'NAME' required = 'required'/>
-
-            <input class = 'input' id = 'email'  type = 'email' name = 'email' value ='' placeholder = 'EMAIL' required = "required"/>
-
-            <input class = 'input_message' id = 'message'  type = 'text' name = 'message' value ='' placeholder = 'MESSAGE' required = 'required'/>
-
-            <div>
-                <button class = 'send' type = 'submit'>SEND</button>
+    {% block content %}
+            <div class = 'social'>
+                Folow me:
+                <a href = 'https://vk.com/id127514808' target = '_blank'><img src = '/static/images/icons/vk_grey.png'></a>
+                <a href = 'https://twitter.com/MilenaKrawetz' target = '_blank'><img src = '/static/images/icons/tw_grey.png'></a>
+                <a href = 'https://instagram.com/planet_milena/' target = '_blank'><img src = '/static/images/icons/instagram.png'></a>
+                <a href = 'https://www.facebook.com/milena.krawetz' target = '_blank'><img src = '/static/images/icons/facebook.png'></a>
             </div>
 
-        </form>
+            <div class = 'form'>
+            <form action = "" method = 'POST'>
+            {% csrf_token %}
 
-    </div>
-{% endblock %}
+                <input class = 'input' id = 'author_name'  type = 'text' name = 'author_name' value ='' placeholder = 'NAME' required />
+
+                <input class = 'input' id = 'email'  type = 'email' name = 'email' value ='' placeholder = 'EMAIL' required />
+
+                <input class = 'input_message' id = 'message'  type = 'text' name = 'message' value ='' placeholder = 'MESSAGE' required/>
+
+                <div>
+                    <button class = 'send' type = 'submit'>SEND</button>
+                </div>
+
+            </form>
+
+            </div>
+    {% endblock %}

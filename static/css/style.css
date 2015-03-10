@@ -7,6 +7,7 @@
    /* font: 14px "Helvetica Neue",Helvetica, Arial, sans-serif;*/
     color: #666;
     font: 14px "liberation-sans",sans-serif;
+    overflow: scroll;
 }
 
 #wrapper {
@@ -28,19 +29,11 @@
 }
 
     .logo:hover {
-       /* float: left;
-        width: 160px;
-        height: 100px;
-        margin: 15px 0;*/
         background: url("/static/images/Milena_Krawetz_pink.png");
         background-repeat:no-repeat;
     }
 
     .logo:visited {
-/*        float: left;
-        width: 160px;
-        height: 100px;
-        margin: 15px 0;*/
         background: url("/static/images/Milena_Krawetz.png");
         background-repeat:no-repeat;
     }
@@ -62,17 +55,17 @@
     padding: 0 13px;
 }
 
-a {
+.menu_item a {
     /*color: #1c1c1c;*/
     color: #666;
     text-decoration: none;
 }
 
-    a:visited {
+    .menu_item a:visited {
         color: #666; /* Цвет посещенных ссылок */
     }
 
-    a:hover {
+    .menu_item a:hover {
         color: #ff0dd1;
     }
 
@@ -91,16 +84,58 @@ a {
 
  /*---blog---*/
 
-.blog_content {
-  /*  margin: 0 100px;*/
+/*.blog_content {
+  display:table-row;
+}*/
+
+.post {
+  display:table-row;
+/*  padding-top: 20px;*/
 }
 
-.news_image {
+.post_image {
+    display: table-cell;
+    width: 450px;
+    height: 300px;
+    padding-top: 20px;
+}
+
+.miniature {
     width: 300px;
 	height: 300px;
+	margin-left: 75px;
 }
 
+.post_description {
+    display: table-cell;
+    width: 450px;
+    height: 300px;
+    padding-top: 20px;
+    vertical-align: middle;
+    text-align:center;
+}
+     a.read_more {
+        color: #ff0dd1;
+        text-decoration: none;
+    }
 
+    a.read_more :visited {
+        color: #ff0dd1;
+    }
+
+    
+    a.post_title_in_list {
+        color: #666;
+        text-decoration: none;
+    }
+
+    a.post_title_in_list :visited {
+        color: #666;
+    }
+
+.image_in_post {
+    margin: 0 100px;
+}
 
  /*---portfolio---*/
 
@@ -126,8 +161,13 @@ a {
 
 /*---contact---*/
 
+.social {
+    margin-top: 50px;
+}
+
+
 .form {
-    margin: 190px 250px 20px 250px;
+    margin: 190px 229px 20px 229px;
 }
 
 .input {
@@ -239,3 +279,19 @@ a {
     display: table-cell;
 	vertical-align: bottom;
 }
+
+/*
+.home_content a {
+    color: #666;
+    text-decoration: none;
+}
+
+    .home_content a:visited {
+        text-decoration: none; */
+/* Цвет посещенных ссылок *//*
+
+    }
+
+    .home_content a:hover {
+        color: #666;
+    }*/

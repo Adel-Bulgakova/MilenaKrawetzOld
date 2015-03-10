@@ -65,6 +65,6 @@ def get_div (id, array_group_of_images):
     images = ''
     for image in array_group_of_images:
         images += "<img src='/media/"+ image.name + "'>"
-        div = "<div id = '"+ id + "' class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+ images+"</div>"
+        div = "<div class = 'image_in_post'><div id = '"+ id + "' class = 'fotorama' data-allowfullscreen = 'true' data-width = '700' data-ratio = '700/467' data-max-width = '100%'>"+ images+"</div></div>"
     return div
 
