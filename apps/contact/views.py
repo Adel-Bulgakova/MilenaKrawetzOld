@@ -1,9 +1,6 @@
 # encoding: utf-8
-from datetime import datetime
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
-from django.core.urlresolvers import reverse
-from django.views import generic
 from forms import ContactForm
 from models import Contact
 from django.template import RequestContext

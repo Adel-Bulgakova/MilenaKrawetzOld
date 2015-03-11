@@ -13,8 +13,7 @@ def get_posts_list(request):
 		post_images = Post_image.objects.all()
 		array_img = []
 		for image in post_images:
-			post_image = image.post
-			if post == post_image:
+			if post == image.post:
 				img = image.image
 				array_img.append(img)
 
@@ -31,8 +30,7 @@ def get_post_detail(request, pk):
     post_images = Post_image.objects.all()
     array_img = []
     for image in post_images:
-        post_image = image.post
-        if post == post_image:
+        if post == image.post:
             array_img.append(image)
     post.content = parse_content(post.content, array_img)
     full_object = {'post':post, 'array_img':array_img}

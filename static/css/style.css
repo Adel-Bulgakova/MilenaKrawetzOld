@@ -24,17 +24,17 @@
     width: 160px;
     height: 100px;
     margin: 15px 0;
-    background: url("/static/images/Milena_Krawetz.png");
+    background: url("/static/images/logo-light-grey.png");
     background-repeat:no-repeat;
 }
 
     .logo:hover {
-        background: url("/static/images/Milena_Krawetz_pink.png");
+        background: url("/static/images/logo-pink.png");
         background-repeat:no-repeat;
     }
 
     .logo:visited {
-        background: url("/static/images/Milena_Krawetz.png");
+        background: url("/static/images/logo-light-grey.png");
         background-repeat:no-repeat;
     }
 
@@ -62,7 +62,7 @@
 }
 
     .menu_item a:visited {
-        color: #666; /* Цвет посещенных ссылок */
+        color: #666;
     }
 
     .menu_item a:hover {
@@ -90,7 +90,6 @@
 
 .post {
   display:table-row;
-/*  padding-top: 20px;*/
 }
 
 .post_image {
@@ -147,6 +146,7 @@
 /*  float: left;*/
     /*margin: 0 100px;*/
 }
+
 .portfolio_description {
 /*    float: left;*/
     /*margin: 0 100px;*/
@@ -162,12 +162,88 @@
 /*---contact---*/
 
 .social {
-    margin-top: 50px;
+   width: 900px;
+   padding-top: 50px;
+   text-align: center;
+
 }
+
+.social_icons {
+    width: 320px;
+    margin: 10px 290px 0 290px;
+}
+
+.icon {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.icon_vk {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url("/static/images/icons/vk.png");
+}
+
+    .icon_vk:hover {
+        background: url("/static/images/icons/vk_pink.png");
+    }
+
+    .icon_vk:visited {
+        background: url("/static/images/icons/vk.png");
+    }
+
+.icon_twitter {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url("/static/images/icons/twitter.png");
+}
+
+    .icon_twitter:hover {
+        background: url("/static/images/icons/twitter_pink.png");
+    }
+
+    .icon_twitter:visited {
+        background: url("/static/images/icons/twitter.png");
+    }
+
+.icon_instagram {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url("/static/images/icons/instagram.png");
+}
+
+    .icon_instagram:hover {
+        background: url("/static/images/icons/instagram_pink.png");
+    }
+
+    .icon_instagram:visited {
+        background: url("/static/images/icons/instagram.png");
+    }
+
+.icon_facebook {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url("/static/images/icons/facebook.png");
+}
+
+    .icon_facebook:hover {
+        background: url("/static/images/icons/facebook_pink.png");
+    }
+
+    .icon_facebook:visited {
+        background: url("/static/images/icons/facebook.png");
+     }
 
 
 .form {
-    margin: 190px 229px 20px 229px;
+    margin: 180px 229px 20px 229px;
+    text-align: center;
 }
 
 .input {
@@ -191,6 +267,7 @@
     display: block;
     margin-top: 20px;
     box-shadow: inset 0 1px 0 0 #e1e1e1;
+    rows: 5;
 }
 
 .send {
@@ -221,37 +298,29 @@
 
 }
 
-.box_top{
-}
-	.box_top_left {
-		float: left;
+
+	#box1 {
+	    float: left;
+		width: 585px;
+		height: 350px;
+		margin: 0 5px 5px 0;
 	}
 
-		 #box1 {
-			width: 585px;
-			height: 350px;
-			margin: 0 5px 5px 0;
-		}
 
-    .box_top_right {
-		float: left;
+    #box2 {
+        float: left;
+		width: 305px;
+		height: 170px;
+		margin: 0 0 5px 5px;
 	}
-        #box2 {
-			width: 305px;
-			height: 170px;
-			margin: 0 0 10px 5px;
-		}
 
-        #box3 {
-			width: 305px;
-			height: 170px;
-			margin: 5px 0 5px 5px;
-		}
+    #box3 {
+        float: left;
+		width: 305px;
+		height: 170px;
+		margin: 5px 0 5px 5px;
+	}
 
-
-.box_bottom {
-
-}
 	#box4 {
 	    float: left;
 		width: 445px;
@@ -273,25 +342,15 @@
 	background-color: white;
 }
 
-.name {
+.portfolio_title {
     height: 30px;
     width: inherit;
     display: table-cell;
 	vertical-align: bottom;
 }
 
-/*
+
 .home_content a {
     color: #666;
     text-decoration: none;
 }
-
-    .home_content a:visited {
-        text-decoration: none; */
-/* Цвет посещенных ссылок *//*
-
-    }
-
-    .home_content a:hover {
-        color: #666;
-    }*/

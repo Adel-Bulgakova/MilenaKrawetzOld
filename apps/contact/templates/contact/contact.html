@@ -2,14 +2,16 @@
 {% block title %}Milena Krawetz | Contact{% endblock %}
     {% block content %}
             <div class = 'social'>
-                Folow me:
-                <a href = 'https://vk.com/id127514808' target = '_blank'><img src = '/static/images/icons/vk_grey.png'></a>
-                <a href = 'https://twitter.com/MilenaKrawetz' target = '_blank'><img src = '/static/images/icons/tw_grey.png'></a>
-                <a href = 'https://instagram.com/planet_milena/' target = '_blank'><img src = '/static/images/icons/instagram.png'></a>
-                <a href = 'https://www.facebook.com/milena.krawetz' target = '_blank'><img src = '/static/images/icons/facebook.png'></a>
+                <div class = 'social_icons'>
+                    <div class = 'icon'><a href = 'https://vk.com/id127514808' class = 'icon_vk' target = '_blank'></a></div>
+                    <div class = 'icon'><a href = 'https://twitter.com/MilenaKrawetz' class = 'icon_twitter' target = '_blank'></a></div>
+                    <div class = 'icon'><a href = 'https://instagram.com/planet_milena/' class = 'icon_instagram' target = '_blank'></a></div>
+                    <div class = 'icon'><a href = 'https://www.facebook.com/milena.krawetz' class = 'icon_facebook' target = '_blank'></a></div>
+                </div>
             </div>
 
             <div class = 'form'>
+                Contact me
             <form action = "" method = 'POST'>
             {% csrf_token %}
 
