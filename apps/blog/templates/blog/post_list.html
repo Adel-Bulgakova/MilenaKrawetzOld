@@ -2,29 +2,30 @@
 {% block title %}Milena Krawetz | Blog{% endblock %}
 
 {% block content %}
-<!--<div class = 'blog_content'>-->
 
     {% for full_object in posts %}
-<div class = 'post'>
-    <div class = 'post_image'>
-        {% if full_object.img %}
-            <div class = 'miniature' style='background:url(/media/{{ full_object.img }}); background-size: cover;	background-position: 50% 50%;	background-repeat: no-repeat;'></div>
-        {% endif %}
+
+    <div class = 'post'>
+
+        <div class = 'post_image'>
+            {% if full_object.img %}
+                <div class = 'miniature' style='background:url(/media/{{ full_object.img }}); background-size: cover;	background-position: 50% 50%;	background-repeat: no-repeat;'></div>
+            {% endif %}
+        </div>
+
+        <div class = 'post_description'>
+            <h2><a href='{{ full_object.post.get_absolute_url }}' class = 'post_title_in_list'>{{ full_object.post.title }}</a></h2>
+
+            <p>{{ full_object.post.date }}</p>
+            <p>{{ full_object.post.preview }}</p>
+
+            <a href='{{ full_object.post.get_absolute_url }}' class = 'read_more'>Read more</a>
+        </div>
+
     </div>
 
-    <div class = 'post_description'>
-        <h2><a href='{{ full_object.post.get_absolute_url }}' class = 'post_title_in_list'>{{ full_object.post.title }}</a></h2>
-
-        <p>{{ full_object.post.date }}</p>
-        <p>{{ full_object.post.preview }}</p>
-
-        <a href='{{ full_object.post.get_absolute_url }}' class = 'read_more'>Read more</a>
-    </div>
-</div>
         {% empty %}
             <p>Нет постов</p>
     {% endfor %}
 
-
-<!--</div>-->
 {% endblock %}

@@ -6,7 +6,7 @@
     height: 100%;
    /* font: 14px "Helvetica Neue",Helvetica, Arial, sans-serif;*/
     color: #666;
-    font: 14px "liberation-sans",sans-serif;
+    font: 1em "liberation-sans",sans-serif;
     overflow: scroll;
 }
 
@@ -15,7 +15,7 @@
     margin: auto;
 }
 
-.header {
+header {
     height: 130px;
 }
 
@@ -84,16 +84,12 @@
 
  /*---blog---*/
 
-/*.blog_content {
-  display:table-row;
-}*/
-
 .post {
-  display:table-row;
+  width: 900px;
 }
 
 .post_image {
-    display: table-cell;
+    float: left;
     width: 450px;
     height: 300px;
     padding-top: 20px;
@@ -106,12 +102,15 @@
 }
 
 .post_description {
-    display: table-cell;
+    float: left;
     width: 450px;
     height: 300px;
     padding-top: 20px;
-    vertical-align: middle;
     text-align:center;
+}
+
+.ff {
+    clear: all;
 }
      a.read_more {
         color: #ff0dd1;
@@ -138,18 +137,18 @@
 
  /*---portfolio---*/
 
-.portfolio_content {
-   /* margin: 0 100px;*/
-}
-
 .portfolio{
-/*  float: left;*/
-    /*margin: 0 100px;*/
+    width: 900px;
 }
 
 .portfolio_description {
-/*    float: left;*/
-    /*margin: 0 100px;*/
+    float: left;
+    width: 30%;
+}
+
+.portfolio_images {
+    float: left;
+    width: 70%;
 }
 
 
@@ -283,13 +282,7 @@
 
 /*---home---*/
 
-/*
-.home_content {
-    height: 100%;
-}
-*/
-
-.box {
+0.box {
 	background-color: fff;
 	margin: auto;
 	background-size: cover;

@@ -14,29 +14,28 @@
 
     {% block content %}
 
-<!--<div class = 'portfolio_content'>-->
-
     {% for full_object in portfolio %}
 
-    <div class = 'portfolio' id = '{{ full_object.portfolio.pk }}'>
-
-        <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '900' data-ratio = '900/550' data-max-width = '100%'>
-
-            {% for work_image in full_object.work_images %}
-                <img src="/media/{{ work_image }}" >
-            {% endfor %}
-
-        </div>
+    <div class = 'portfolio'>
 
         <div class = 'portfolio_description'>
-            <p>Project name: {{ full_object.portfolio.title }}</p>
-            <p>Project description: {{ full_object.portfolio.description }}</p>
+            <h2>{{ full_object.portfolio.title }}</h2>
+            <p>{{ full_object.portfolio.description }}</p>
         </div>
+
+        <div class = 'portfolio_images' id = '{{ full_object.portfolio.pk }}'>
+            <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '630' data-ratio = '630/450' data-max-width = '100%'>
+
+                {% for work_image in full_object.work_images %}
+                    <img src="/media/{{ work_image }}" >
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
 
     {% empty %}
     <p>Нет картин</p>
     {% endfor %}
 
-    </div>
-<!--</div>-->
     {% endblock %}
