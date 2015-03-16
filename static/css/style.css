@@ -6,7 +6,7 @@
     height: 100%;
    /* font: 14px "Helvetica Neue",Helvetica, Arial, sans-serif;*/
     color: #666;
-    font: 1em "liberation-sans",sans-serif;
+    font: 1em 'Open Sans',sans-serif;
     overflow: scroll;
 }
 
@@ -43,7 +43,7 @@ header {
     float: right;
 }
 
-.menu_item {
+.menu div {
     height: 130px;
     display: table-cell;
     vertical-align: middle;
@@ -55,17 +55,21 @@ header {
     padding: 0 13px;
 }
 
-.menu_item a {
+.menu div  a {
     /*color: #1c1c1c;*/
     color: #666;
     text-decoration: none;
 }
 
-    .menu_item a:visited {
+    .menu div  a:visited {
         color: #666;
     }
 
-    .menu_item a:hover {
+    .menu div  a:hover {
+        color: #ff0dd1;
+    }
+
+.menu div.active a {
         color: #ff0dd1;
     }
 
@@ -162,14 +166,13 @@ header {
 
 .social {
    width: 900px;
-   padding-top: 50px;
+   padding-top: 60px;
    text-align: center;
 
 }
 
 .social_icons {
-    width: 320px;
-    margin: 10px 290px 0 290px;
+    margin: 0 250px;
 }
 
 .icon {
@@ -239,6 +242,21 @@ header {
         background: url("/static/images/icons/facebook.png");
      }
 
+.icon_youtube {
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: url("/static/images/icons/youtube.png");
+}
+
+    .icon_youtube:hover {
+        background: url("/static/images/icons/youtube_pink.png");
+    }
+
+    .icon_youtube:visited {
+        background: url("/static/images/icons/youtube.png");
+     }
+
 
 .form {
     margin: 180px 229px 20px 229px;
@@ -282,7 +300,7 @@ header {
 
 /*---home---*/
 
-0.box {
+.box {
 	background-color: fff;
 	margin: auto;
 	background-size: cover;

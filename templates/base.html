@@ -7,7 +7,22 @@
         <meta name="keywords" content = 'Milena Krawetz, art, travel' />
 
       	<link rel = 'stylesheet' href = "/static/css/style.css">
+
         {% block css %}{% endblock %}
+
+        <script src = "/static/libs/jquery-2.1.3.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                $('.menu div a').each(function() {
+                if(document.URL.indexOf($(this).attr('href')) != -1) {
+                        $(this).parent().addClass('active');
+                    }
+                });
+            });
+
+        </script>
 
         {% block scripts %}{% endblock %}
 
@@ -20,15 +35,15 @@
                 <a href = "/" class = 'logo'></a>
 
 		        <nav class = 'menu'>
-                    <div class = 'menu_item'><a href = "/home/">HOME</a></div>
+                    <div><a href = "/home/">HOME</a></div>
                     <div class = 'separator'>/</div>
-                    <div class = 'menu_item'><a href = "/about/">ABOUT</a></div>
+                    <div><a href = "/about/">ABOUT</a></div>
                     <div class = 'separator'>/</div>
-                    <div class = 'menu_item'><a href = "/portfolio/">PORTFOLIO</a></div>
+                    <div><a href = "/portfolio/">PORTFOLIO</a></div>
                     <div class = 'separator'>/</div>
-                    <div class = 'menu_item'><a href = "/blog/">BLOG</a></div>
+                    <div><a href = "/blog/">BLOG</a></div>
                     <div class = 'separator'>/</div>
-                    <div class = 'menu_item'><a href = "/contact/">CONTACT</a></div>
+                    <div><a href = "/contact/">CONTACT</a></div>
 		        </nav>
 
             </header>

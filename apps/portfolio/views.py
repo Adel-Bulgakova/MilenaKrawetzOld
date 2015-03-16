@@ -20,7 +20,6 @@ def get_random_images(request):
                     full_object = {'portfolio':work, 'image':picture.image}
                     full_objects.append(full_object)
         response['portfolio'] = full_objects
-        print response
         return render_to_response('portfolio/home.html', response, template.RequestContext(request))
 
 
