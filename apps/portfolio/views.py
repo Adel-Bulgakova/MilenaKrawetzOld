@@ -15,10 +15,12 @@ def get_random_images(request):
         full_objects = []
         for work in random_works:
             pictures = Portfolio_image.objects.all()
+            array_images = []
             for picture in pictures:
                 if work == picture.portfolio:
-                    full_object = {'portfolio':work, 'image':picture.image}
-                    full_objects.append(full_object)
+                    array_images.append(picture.image)
+            full_object = {'portfolio':work, 'image':array_images[0]}
+            full_objects.append(full_object)
         response['portfolio'] = full_objects
         return render_to_response('portfolio/home.html', response, template.RequestContext(request))
 
