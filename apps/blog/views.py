@@ -7,20 +7,7 @@ from django import template
 
 def get_posts_list(request):
 	response = {}
-	posts = Post.objects.all()
-	full_objects = []
-	for post in posts:
-		post_images = Post_image.objects.all()
-		array_img = []
-		for image in post_images:
-			if post == image.post:
-				img = image.image
-				array_img.append(img)
-
-		full_object = {'post':post, 'img':array_img[0]}
-		full_objects.append(full_object)
-
-	response['posts'] = full_objects
+	response['posts'] = Post.objects.all()
 	return render_to_response('blog/post_list.html', response, template.RequestContext(request))
 
 
