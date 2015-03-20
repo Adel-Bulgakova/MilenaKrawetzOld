@@ -8,10 +8,10 @@ class PostImagesInline(admin.TabularInline):
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets =  (None,
-        {'fields': ('title', 'date', 'published', 'preview', 'content',)}
+        {'fields': ('title', 'date', 'preview', 'content', 'thumbnail',)}
     ),
     inlines = [PostImagesInline]
-    list_display = ('title', 'date', 'published',)
+    list_display = ('title', 'preview_image', 'date',)
 
 
 admin.site.register(Post, PostAdmin)

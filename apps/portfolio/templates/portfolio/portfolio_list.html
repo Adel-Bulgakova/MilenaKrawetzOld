@@ -26,7 +26,7 @@
             <div class = 'fotorama' data-allowfullscreen = 'true' data-width = '630' data-ratio = '630/450' data-max-width = '100%'>
 
                 {% for work_image in full_object.work_images %}
-                    <img src="/media/{{ work_image }}" >
+                    <img src="/media/{{ work_image }}" alt = "{{ full_object.portfolio.title }}" >
                 {% endfor %}
 
             </div>

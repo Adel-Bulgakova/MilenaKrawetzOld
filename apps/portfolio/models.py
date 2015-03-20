@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 from django.db import models
+from PIL import Image
 
 class Portfolio(models.Model):
     title = models.CharField(u'Заголовок', max_length = 500)
@@ -12,6 +13,7 @@ class Portfolio(models.Model):
     def get_absolute_url(self):
         return "/portfolio/%i/" % self.id
 
+
     class Meta:
         verbose_name = u'Портфолио'
         verbose_name_plural = u'Портфолио'
@@ -22,6 +24,19 @@ class Portfolio_image (models.Model):
 
     def __unicode__(self):
         return self.image.name
+
+    def save(self, size=(400, 300)):
+
+        if not self.id and not self.source:
+            return
+
+        super(Portfolio_image, self).save()
+
+        filename = self.get_source_filename()
+        image = Image.open(filename)
+
+        image.thumbnail(size, Image.ANTIALIAS)
+        image.save(filename)
 
     class Meta:
         verbose_name = u'Портфолио'
