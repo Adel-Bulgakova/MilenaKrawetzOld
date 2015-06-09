@@ -28,8 +28,8 @@ def get_post_detail(request, pk):
 def parse_content(content, array_img):
     result = ''
     while content.find('##')>0:
-        s = content[0:content.find('##')]
-        p = "<p>"+ s + "</p>"
+        indexImages = content[0:content.find('##')]
+        p = "<p>"+ indexImages + "</p>"
         content = content.replace(content[:content.find('##')+2], '')
         id = content[0:(content.find('$$'))]
         array_group_of_images = get_group_of_images(id, array_img)

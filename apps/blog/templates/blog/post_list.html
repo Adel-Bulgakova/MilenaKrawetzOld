@@ -5,21 +5,21 @@
 
     {% for post in posts %}
 
-    <div class = 'post'>
+    <div class="row post">
 
-        <div class = 'post_image'>
+        <div class="col-xs-12 col-sm-12 col-md-6 post_image">
             {% if post.thumbnail %}
-                <div class = 'miniature' style='background:url(/media/{{ post.thumbnail}}); background-size: cover;	background-position: 50% 50%;	background-repeat: no-repeat;'></div>
+                <div class="miniature" style="background:url(/media/{{ post.thumbnail}}); background-size: cover;	background-position: 50% 50%;	background-repeat: no-repeat;"></div>
             {% endif %}
         </div>
 
-        <div class = 'post_description'>
-            <h2><a href='{{ post.get_absolute_url }}' class = 'post_title_in_list'>{{ post.title }}</a></h2>
+        <div class="col-xs-12 col-sm-12 col-md-6 post_description">
+            <h2><a href="{{ post.get_absolute_url }}" class="post_title_in_list">{{ post.title }}</a></h2>
 
             <p>{{ post.date }}</p>
             <p>{{ post.preview }}</p>
 
-            <a href='{{ post.get_absolute_url }}' class = 'read_more'>Read more</a>
+            <a href="{{ post.get_absolute_url }}" class="read_more">Read more</a>
         </div>
 
     </div>

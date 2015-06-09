@@ -1,29 +1,27 @@
 {% extends "base.html" %}
 {% block title %}Milena Krawetz | Contact{% endblock %}
     {% block content %}
-            <div class = 'social'>
-                <div class = 'social_icons'>
-                    <div class = 'icon'><a href = 'https://vk.com/id127514808' class = 'icon_vk' target = '_blank'></a></div>
-                    <div class = 'icon'><a href = 'https://twitter.com/MilenaKrawetz' class = 'icon_twitter' target = '_blank'></a></div>
-                    <div class = 'icon'><a href = 'https://instagram.com/planet_milena/' class = 'icon_instagram' target = '_blank'></a></div>
-                    <div class = 'icon'><a href = 'https://www.facebook.com/milena.krawetz' class = 'icon_facebook' target = '_blank'></a></div>
-                    <div class = 'icon'><a href = 'https://www.youtube.com/channel/UCK9lX-pTDQfNu4Jte-_EPlQ' class = 'icon_youtube' target = '_blank'></a></div>
-                </div>
-            </div>
+        <div class="social_icons">
+            <a href="https://vk.com/id127514808" class="icon_vk" target="_blank"></a>
+            <a href="https://twitter.com/MilenaKrawetz" class="icon_twitter" target="_blank"></a>
+            <a href="https://instagram.com/planet_milena/" class="icon_instagram" target="_blank"></a>
+            <a href="https://www.facebook.com/milena.krawetz" class="icon_facebook" target="_blank"></a>
+            <a href="https://www.youtube.com/channel/UCK9lX-pTDQfNu4Jte-_EPlQ" class="icon_youtube" target="_blank"></a>
+        </div>
 
-            <div class = 'form'>
-                Contact me
-            <form action = "" method = 'POST'>
+            <div class="form">
+                <p>Contact me</p>
+            <form action = "" method = "POST">
             {% csrf_token %}
 
-                <input class = 'input' id = 'author_name'  type = 'text' name = 'author_name' value ='' placeholder = 'NAME' required />
+                <input class="input" id="author_name" type="text" name="author_name" value="" placeholder="NAME" required />
 
-                <input class = 'input' id = 'email'  type = 'email' name = 'email' value ='' placeholder = 'EMAIL' required />
+                <input class="input" id="email" type="email" name="email" value="" placeholder="EMAIL" required />
 
-                <input class = 'input_message' id = 'message'  type = 'text' name = 'message' value ='' placeholder = 'MESSAGE' required/>
+                <input class="input_message" id="message" type="text" name="message" value="" placeholder="MESSAGE" required/>
 
                 <div>
-                    <button class = 'send' type = 'submit'>SEND</button>
+                    <button class="send" type="submit">SEND</button>
                 </div>
 
             </form>

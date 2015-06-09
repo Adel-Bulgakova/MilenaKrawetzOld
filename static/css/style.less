@@ -1,0 +1,500 @@
+@fontFamily:'Open Sans',sans-serif;
+@fontColor: #4d4d4d;
+@themeColor: #ff0dd1;
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 100%;
+}
+
+body {
+    margin-bottom: 20px;
+    font-size: 1em;
+    font-family: @fontFamily;
+    color: @fontColor;
+    background-color: #fff;
+}
+
+
+.navbar-default{
+    background-color: #fff;
+   /* min-height: 110px; */
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:visited {
+    border-color: @themeColor;
+}
+
+.navbar-default .navbar-toggle .icon-bar, .navbar-default .navbar-toggle:visited .icon-bar {
+    background-color: @themeColor;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: @themeColor;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: @fontColor;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: @themeColor;
+}
+
+.navbar-default .navbar-nav > li:last-child > a {
+    padding-right: 0;
+}
+
+
+/*
+.logo {
+    float: left;
+    width: 160px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: url("/static/images/logo-light-grey.png");
+    background-repeat:no-repeat;
+}
+
+    .logo:hover {
+        background: url("/static/images/logo-pink.png");
+        background-repeat:no-repeat;
+    }
+
+    .logo:visited {
+        background: url("/static/images/logo-light-grey.png");
+        background-repeat:no-repeat;
+    }
+*/
+
+
+@media all {
+    .col-xs-12, .col-sm-12{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .row{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .portfolio_description, .portfolio_images  {
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 900px;
+        padding: 0;
+    }
+
+    .container .text-muted {
+        margin: 20px 0;
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        text-align: center;
+    }
+
+    .footer > .container {
+        text-align: center;
+    }
+
+    a.read_more {
+        color: @themeColor;
+        text-decoration: none;
+    }
+
+    a.read_more :visited {
+        color: @themeColor;
+    }
+
+    a.post_title_in_list {
+        color: #666;
+        text-decoration: none;
+    }
+
+    a.post_title_in_list :visited {
+        color: #666;
+    }
+
+        /*---about---*/
+
+    .information {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+        /*---contact---*/
+
+    .social_icons {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 900px) {
+
+    .box > .col-xs-12, .col-sm-12{
+        width: 100%;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+
+    .slide {
+	    height: 30px;
+	    background-color: white;
+    }
+
+    .portfolio_title {
+        height: 30px;
+        width: inherit;
+        display: table-cell;
+	    vertical-align: bottom;
+    }
+
+    .home_content a {
+        color: #666;
+        text-decoration: none;
+    }
+
+        /*---blog---*/
+
+    .post_image {
+        height: 300px;
+    }
+
+    .miniature {
+        width: 100%;
+	    height: 300px;
+    }
+
+    .post_description {
+        text-align:center;
+    }
+
+        /*---contact---*/
+
+    .social_icons {
+        height: 30px;
+        margin: 30px auto 60px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        display: inline-block;
+    }
+
+    .icon_vk, .icon_vk:visited {
+        .icon();
+        background: url("/static/images/icons/vk.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+        .icon_vk:hover {
+            background: url("/static/images/icons/vk_pink.png") 100% 100% no-repeat;
+            background-size: cover;
+        }
+
+    .icon_twitter, .icon_twitter:visited {
+        .icon();
+        background: url("/static/images/icons/twitter.png")100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_twitter:hover {
+            background: url("/static/images/icons/twitter_pink.png") 100% 100% no-repeat;
+            background-size: cover;
+        }
+
+    .icon_instagram, .icon_instagram:visited {
+        .icon();
+        background: url("/static/images/icons/instagram.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_instagram:hover {
+            background: url("/static/images/icons/instagram_pink.png") 100% 100% no-repeat;
+            background-size: cover;
+        }
+
+    .icon_facebook, .icon_facebook:visited {
+        .icon();
+        background: url("/static/images/icons/facebook.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_facebook:hover {
+            background: url("/static/images/icons/facebook_pink.png") 100% 100% no-repeat;
+            background-size: cover;
+        }
+
+    .icon_youtube, .icon_youtube:visited {
+        .icon();
+        background: url("/static/images/icons/youtube.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_youtube:hover {
+            background: url("/static/images/icons/youtube_pink.png") 100% 100% no-repeat;
+            background-size: cover;
+        }
+
+    .form {
+        width: 100%;
+        padding: 20px auto;
+        text-align: center;
+    }
+
+    .input {
+        transition: all 300ms;
+        width: 85%;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+    }
+
+    .input_message {
+        transition: all 300ms;
+        width: 85%;
+        height: 55px;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+        rows: 5;
+    }
+
+    .send {
+        transition: all 300ms;
+        width: 85%;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+    }
+
+}
+
+
+@media only screen and (min-width: 900px){
+    .container {
+        width: 900px;
+    }
+
+    .navbar-right {
+        margin-right: 0;
+    }
+
+    .box {
+	    background-color: #fff;
+	    margin: auto;
+	    background-size: cover;
+	    background-position: 50% 50%;
+	    background-repeat: no-repeat;
+    }
+
+	#box1 {
+	    float: left;
+		width: 585px;
+		height: 350px;
+		margin: 0 5px 5px 0;
+	}
+
+    #box2 {
+        float: left;
+		width: 305px;
+		height: 170px;
+		margin: 0 0 5px 5px;
+	}
+
+    #box3 {
+        float: left;
+		width: 305px;
+		height: 170px;
+		margin: 5px 0 5px 5px;
+	}
+
+	#box4 {
+	    float: left;
+		width: 445px;
+		height: 200px;
+		margin: 5px 5px 0 0;
+	}
+
+	#box5 {
+	    float: left;
+		width: 445px;
+		height: 200px;
+		margin: 5px 0 0 5px;
+	}
+
+	.slide {
+        display: none;
+	    height: 30px;
+	    background-color: white;
+    }
+
+    .portfolio_title {
+        height: 30px;
+        width: inherit;
+        display: table-cell;
+	    vertical-align: bottom;
+    }
+
+    .home_content a {
+        color: #666;
+        text-decoration: none;
+    }
+
+        /*---blog---*/
+
+    .post{
+        margin-bottom: 20px;
+    }
+
+    .post_image {
+        height: 300px;
+    }
+
+    .miniature {
+        width: 300px;
+	    height: 300px;
+	    margin-left: 75px;
+    }
+
+    .post_description {
+        height: 300px;
+        text-align:center;
+    }
+
+        /*---contact---*/
+
+    .social_icons {
+        height: 60px;
+        margin: 60px auto;
+    }
+
+
+    .icon{
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .icon_vk, .icon_vk:visited {
+        .icon();
+        background: url("/static/images/icons/vk.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_vk:hover {
+            background: url("/static/images/icons/vk_pink.png");
+        }
+
+
+    .icon_twitter, .icon_twitter:visited{
+        .icon();
+        background: url("/static/images/icons/twitter.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_twitter:hover {
+            background: url("/static/images/icons/twitter_pink.png");
+        }
+
+    .icon_instagram, .icon_instagram:visited {
+        .icon();
+        background: url("/static/images/icons/instagram.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_instagram:hover {
+            background: url("/static/images/icons/instagram_pink.png");
+        }
+
+    .icon_facebook, .icon_facebook:visited  {
+        .icon();
+        background: url("/static/images/icons/facebook.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_facebook:hover {
+            background: url("/static/images/icons/facebook_pink.png");
+        }
+
+    .icon_youtube, .icon_youtube:visited  {
+        .icon();
+        background: url("/static/images/icons/youtube.png") 100% 100% no-repeat;
+        background-size: cover;
+    }
+
+        .icon_youtube:hover {
+            background: url("/static/images/icons/youtube_pink.png");
+        }
+
+
+    .form {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .input {
+        transition: all 300ms;
+        width: 50%;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+    }
+
+    .input_message {
+        transition: all 300ms;
+        width: 50%;
+        height: 55px;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+        rows: 5;
+    }
+
+    .send {
+        transition: all 300ms;
+        width: 50%;
+        padding: 20px;
+        border: 1px solid #d1d1d1;
+        border-radius: 5px;
+        margin-top: 20px;
+        box-shadow: inset 0 1px 0 0 #e1e1e1;
+    }
+}
+
+/*
+.image_in_post {
+    margin: 0 100px;
+}
+*/

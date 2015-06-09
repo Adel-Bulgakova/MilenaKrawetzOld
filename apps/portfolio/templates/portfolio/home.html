@@ -8,11 +8,11 @@
         $(".parent")
 
         .mouseenter(function(){
-        $(this).find("div.slide").slideDown();
+            $(this).find("div.slide").slideDown();
         })
 
         .mouseleave(function(){
-        $(this).find("div.slide").slideUp()
+            $(this).find("div.slide").slideUp()
         });
 
         };
@@ -22,49 +22,49 @@
 
 {% block content %}
 
-<div class = 'home_content'>
-    <div class = 'box'>
+<div class="home_content">
+    <div class="box">
 
-        <a href='/portfolio/#{{ portfolio.0.portfolio.pk }}'>
-            <div class = 'parent' id = 'box1' style = 'background: url(/media/{{ portfolio.0.image }}) 50% 50%  no-repeat; background-size: cover;'>
-                <div class = 'slide'>
-                    <div class = 'portfolio_title'>{{ portfolio.0.portfolio.title }}</div>
+        <a href="/portfolio/#{{ portfolio.0.portfolio.pk }}">
+            <div id="box1" class="parent col-xs-12 col-sm-12" style="background: url(/media/{{ portfolio.0.image }}) 50% 50%  no-repeat; background-size: cover;">
+                <div class="slide">
+                    <div class="portfolio_title">{{ portfolio.0.portfolio.title }}</div>
                 </div>
             </div>
         </a>
 
-
-        <a href='/portfolio/#{{ portfolio.1.portfolio.pk }}'>
-            <div class = 'parent' id = 'box2' style = 'background: url(/media/{{ portfolio.1.image }}) 50% 50%  no-repeat; background-size: cover;'>
-                <div class = 'slide'>
-                    <div class = 'portfolio_title'>{{ portfolio.1.portfolio.title }}</div>
+        <a href="/portfolio/#{{ portfolio.1.portfolio.pk }}">
+            <div id="box2" class="parent col-xs-12 col-sm-12" style="background: url(/media/{{ portfolio.1.image }}) 50% 50%  no-repeat; background-size: cover;">
+                <div class="slide">
+                    <div class="portfolio_title">{{ portfolio.1.portfolio.title }}</div>
                 </div>
             </div>
         </a>
 
-        <a href='/portfolio/#{{ portfolio.2.portfolio.pk }}'>
-            <div class = 'parent' id = 'box3' style = 'background: url(/media/{{ portfolio.2.image }}) 50% 50%  no-repeat; background-size: cover;'>
-                <div class = 'slide'>
-                    <div class = 'portfolio_title'>{{ portfolio.2.portfolio.title }}</div>
+        <a href="/portfolio/#{{ portfolio.2.portfolio.pk }}">
+            <div class="parent col-xs-12 col-sm-12" id="box3" style="background: url(/media/{{ portfolio.2.image }}) 50% 50%  no-repeat; background-size: cover;">
+                <div class="slide">
+                    <div class="portfolio_title">{{ portfolio.2.portfolio.title }}</div>
                 </div>
             </div>
         </a>
 
-        <a href='/portfolio/#{{ portfolio.3.portfolio.pk }}'>
-            <div class = 'parent' id = 'box4' style = 'background: url(/media/{{ portfolio.3.image }}) 50% 50%  no-repeat; background-size: cover;'>
-                <div class = 'slide'>
-                    <div class = 'portfolio_title'>{{ portfolio.3.portfolio.title }}</div>
+        <a href="/portfolio/#{{ portfolio.3.portfolio.pk }}">
+            <div class="parent col-xs-12 col-sm-12" id="box4" style="background: url(/media/{{ portfolio.3.image }}) 50% 50%  no-repeat; background-size: cover;">
+                <div class="slide">
+                    <div class="portfolio_title">{{ portfolio.3.portfolio.title }}</div>
                 </div>
             </div>
         </a>
 
-        <a href='/portfolio/#{{ portfolio.4.portfolio.pk }}'>
-            <div class = 'parent' id = 'box5' style = 'background: url(/media/{{ portfolio.4.image }}) 50% 50%  no-repeat; background-size: cover;'>
-                <div class = 'slide'>
-                    <div class = 'portfolio_title'>{{ portfolio.4.portfolio.title }}</div>
+        <a href="/portfolio/#{{ portfolio.4.portfolio.pk }}">
+            <div class="parent col-xs-12 col-sm-12" id="box5" style="background: url(/media/{{ portfolio.4.image }}) 50% 50%  no-repeat; background-size: cover;">
+                <div class="slide">
+                    <div class="portfolio_title">{{ portfolio.4.portfolio.title }}</div>
                 </div>
             </div>
         </a>
+
 
 	</div>
 </div>

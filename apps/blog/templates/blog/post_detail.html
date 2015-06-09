@@ -3,12 +3,12 @@
 {% block title %}Milena Krawetz | Blog{% endblock %}
 
 {% block css %}
-    <link rel = 'stylesheet' href = "/static/libs/fotorama-4.6.3/fotorama.css">
+    <link rel="stylesheet" href="/static/libs/fotorama-4.6.3/fotorama.css">
 {% endblock %}
 
 {% block scripts %}
 
-    <script src = "/static/libs/fotorama-4.6.3/fotorama.js"></script>
+    <script src="/static/libs/fotorama-4.6.3/fotorama.js"></script>
 
     <script type="text/javascript">
         var disqus_shortname = 'milenakrawetz1';
@@ -23,13 +23,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class = 'blog_content'>
+    <div class="blog_content">
 
-        <div class = 'post_title'><h2>{{ post.post.title }}</h2></div>
-        <div class = 'post_date'><p>{{ post.post.date }}</p></div>
-        <article class = 'post_content'>{{ post.post.content|safe }}</article>
+        <div class="post_title"><h2>{{ post.post.title }}</h2></div>
+        <div class="post_date"><p>{{ post.post.date }}</p></div>
+        <article class="post_content">{{ post.post.content|safe }}</article>
 
-        <div id = 'disqus_thread'></div>
+        <div id="disqus_thread"></div>
 
 </div>
 {% endblock %}

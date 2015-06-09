@@ -24,19 +24,19 @@ class Portfolio_image (models.Model):
 
     def __unicode__(self):
         return self.image.name
-
-    def save(self, size=(400, 300)):
-
-        if not self.id and not self.source:
-            return
-
-        super(Portfolio_image, self).save()
-
-        filename = self.get_source_filename()
-        image = Image.open(filename)
-
-        image.thumbnail(size, Image.ANTIALIAS)
-        image.save(filename)
+    #
+    # def save(self, size=(400, 300)):
+    #
+    #     if not self.id and not self.source:
+    #         return
+    #
+    #     super(Portfolio_image, self).save()
+    #
+    #     filename = self.get_source_filename()
+    #     image = Image.open(filename)
+    #
+    #     image.thumbnail(size, Image.ANTIALIAS)
+    #     image.save(filename)
 
     class Meta:
         verbose_name = u'Портфолио'
